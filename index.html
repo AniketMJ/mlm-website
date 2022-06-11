@@ -12,7 +12,8 @@
 
     <style>
         /* Typography */
-        .my-h1 {
+        .my-h1,
+        .my-h2 {
             font-family: 'DM Serif Display', serif;
             margin: 0;
             padding: 0;
@@ -29,7 +30,12 @@
         }
         .my-p1,
         .my-p2,
+        .my-p3-links,
+        .my-p3,
         .my-p4,
+        .my-h4,
+        .my-h5,
+        .my-link,
         .my-btns {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -44,15 +50,37 @@
             line-height: 24.38px;
             font-weight: 500;
         }
+        .my-p3 {
+            font-size: 18px;
+            line-height: 21.94px;
+        }
         .my-p4 {
             font-size: 16px;
             line-height: 25.6px;
             letter-spacing: 1.2%;
         }
+        .my-h4 {
+            font-size: 28px;
+            line-height: 34.13px;
+            letter-spacing: 1.2%;
+            font-weight: 600;
+        }
+        .my-h5 {
+            font-size: 24px;
+            line-height: 35px;
+            letter-spacing: 1.2%;
+            font-weight: 600;
+        }
 
         /* Colors */
         .neutral-600 {
             color: #034163;
+        }
+        .neutral-500 {
+            color: #065179;
+        }
+        .neutral-400 {
+            color: #1B668F;
         }
         .neutral-300 {
             color: #356982;
@@ -60,6 +88,11 @@
         .neutral-200 {
             color: #638B9C;
         }
+        .grey-cool-500 {
+            color: #839295;
+        }
+
+        /* Background colors */
         .neutral-bg-100 {
             background-color: #EAF6FA;
         }
@@ -67,25 +100,49 @@
         /* Components */
         .my-btns {
             display: inline-block;
-            font-size: 18px;
-            line-height: 21.94px;
-            font-weight: 600;
             padding: 12px 20px;
             margin: 0;
             border-radius: 4px;
             cursor: pointer;
         }
         .my-primary-btn {
+            font-size: 18px;
+            line-height: 21.94px;
+            font-weight: 600;
             color: #FEF6F9;
             background-color: #F71771;
+            transition: transform 200ms linear;
             box-shadow: 1px 1px 6px 1px rgba(230, 92, 138, 0.4), 2px 2px 8px 2px rgba(230, 92, 138, 0.3), 4px 4px 16px 4px rgba(230, 92, 138, 0.1);
         }
         .my-primary-btn:hover {
+            transform: translateY(-4px);
             color: #FEF6F9;
             text-decoration: none;
             background-color: #F71771;
             box-shadow: 1px 1px 6px 1px rgba(230, 92, 138, 0.4), 2px 2px 8px 2px rgba(230, 92, 138, 0.3), 4px 4px 16px 4px rgba(230, 92, 138, 0.1);
         }
+        .my-link {
+            color: #1B668F;
+            font-size: 16px;
+            line-height: 19.5px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        .my-link:hover {
+            color: #1B668F;
+            font-size: 16px;
+            line-height: 19.5px;
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        .my-link:hover span {
+            display: inline-block;
+            transition: transform 200ms linear;
+        }
+        .my-link:hover span {
+            transform: translateX(5px);
+        }
+        
     </style>
 </head>
 <body>
@@ -123,16 +180,16 @@
                     </div>
                     <div class="col-xl-8 mt-xl-5 mx-auto">
                         <img src="./assets/img/dashboard-img.png" alt="Multuple screen images, Dashboard img"
-                        class="col-xl-12">
+                        class="w-100">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mt-xl-5">
-            <div class="mt-xl-5 neutral-bg-100">
+        <section class="mt-xl-5 pt-xl-5">
+            <div class="neutral-bg-100">
                 <img class="neutral-bg-100" src="./assets/img/wave-up.svg" alt="">
-                <div class="container py-4">
+                <div class="container py-xl-5">
                     <div class="row flex-column">
                         <p class="my-p2 text-center neutral-200">Already trusted by</p>
                         <div class="row justify-content-around mt-xl-5">
@@ -174,13 +231,38 @@
                         </div>
                     </div>
                 </div>
-                <img class="bg-white mt-5" src="./assets/img/wave-down.svg" alt="">
+                <img class="bg-white mt-xl-5" src="./assets/img/wave-down.svg" alt="">
             </div>
         </section>
 
-        <section>
-            <div class="container">
+        <section class="mt-xl-5">
+            <div class="container pt-xl-5">
+                <div class="row flex-column align-items-center">
+                    <div class="col-xl-6 text-center">
+                        <h2 class="my-h2 neutral-500">Visit our featured blogs</h2>
+                    </div>
+                    <div class="col-xl-10 mt-xl-5 d-flex justify-content-around">
+                        <div class="col-xl-5 p-0 ">
+                            <img class="w-100" src="./assets/img/networking-img.png" alt="">
+                            <div class="mt-3">
+                                <h4 class="my-h4 neutral-400">Why network marketing</h4>
+                                <p class="my-p3 grey-cool-500 my-2">Everyone wants to have flexibility in their work. The ability to work when and where you want to. Whether it’s to earn a little extra cash or to make a full-time living,Multi-Level Marketing is the answer</p>
+                                <a href="#" class="my-link neutral-400">Read more <span><img src="./assets/img/ep_arrow-right-bold.svg" alt=""></span></a>
+                            </div>
 
+                        </div>
+                        <div class="col-xl-5 p-0 d-flex flex-column">
+                            <div>
+                                <img class="w-100" src="./assets/img/success-img.png" alt="">
+                                <a href="#" class="my-h5 neutral-400 mt-3">How MLM can benefit your business</a>
+                            </div>
+                            <div class="mt-5">
+                                <img class="w-100" src="./assets/img/networking-img.png" alt="">
+                                <a href="#" class="my-h5 neutral-400 mt-3">Top 100 MLM Companies in 2022</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
